@@ -3,3 +3,23 @@ body {
     background-color: #ff7978;
     background-repeat: no-repeat;
 }
+
+
+.container {
+    display: flex;
+}
+
+.description {
+    color: white;
+    float: left;
+}
+
+.fields{
+    background-color: white;
+    border-radius: 5px;
+}
+
+.trial {
+    background-color: blue;
+    border-radius: 5px;
+}
