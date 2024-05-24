@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(fonts/Poppins-Bold.ttf);
+}
+
 body {
     background-image: url("images/bg-intro-desktop.png");
     background-color: #ff7978;
@@ -11,12 +21,24 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 600px;
+    min-width: 800px;
+    max-width: 900px; /*This the ideal width but it needs to be worked on*/
 }
 
 .description {
     color: white;
     float: left;
+}
+
+.description h1 {
+    font-family: Poppins-Bold;
+    font-size: 40px;
+    /*Need to space letters closer*/
+}
+
+.description p {
+    font-family: Poppins;
+    font-size: small;
 }
 
 .sign-up {
