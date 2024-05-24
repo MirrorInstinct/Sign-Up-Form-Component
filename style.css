@@ -7,6 +7,11 @@ body {
 
 .container {
     display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 600px;
 }
 
 .description {
@@ -14,12 +19,20 @@ body {
     float: left;
 }
 
+.sign-up {
+    /* max-width: 500px;
+    min-width: 500px; */
+}
+
 .fields{
     background-color: white;
     border-radius: 5px;
+    text-align: center;
 }
 
 .trial {
-    background-color: blue;
+    background-color: #6053c6;
     border-radius: 5px;
+    text-align: center;
+    font-size: large;
 }
