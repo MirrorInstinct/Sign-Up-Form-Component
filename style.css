@@ -23,11 +23,16 @@ body {
     transform: translate(-50%, -50%);
     min-width: 800px;
     max-width: 900px; /*This the ideal width but it needs to be worked on*/
+
 }
 
 .description {
     color: white;
     float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 50px;
 }
 
 .description h1 {
@@ -48,13 +53,37 @@ body {
 
 .fields{
     background-color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
+    padding: 30px;
 }
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #75bf78;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
 .trial {
     background-color: #6053c6;
     border-radius: 5px;
     text-align: center;
-    font-size: large;
+    font-size: medium;
+    padding: 10px;
+    color: white;
 }
