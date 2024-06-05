@@ -8,6 +8,11 @@
     src: url(fonts/Poppins-Bold.ttf);
 }
 
+@font-face {
+    font-family: Poppins-Light;
+    src: url(fonts/Poppins-Light.ttf);
+}
+
 body {
     background-image: url("images/bg-intro-desktop.png");
     background-color: #ff7978;
@@ -23,7 +28,6 @@ body {
     transform: translate(-50%, -50%);
     min-width: 800px;
     max-width: 900px; /*This the ideal width but it needs to be worked on*/
-
 }
 
 .description {
@@ -38,6 +42,7 @@ body {
 .description h1 {
     font-family: Poppins-Bold;
     font-size: 40px;
+    line-height: 110%;
     /*Need to space letters closer*/
 }
 
@@ -56,6 +61,7 @@ body {
     border-radius: 10px;
     text-align: center;
     padding: 30px;
+    box-shadow: 0px 5px rgba(79, 79, 79, 0.286);
 }
 
 input {
@@ -77,13 +83,29 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    box-shadow: 2px 2px #63a765;
   }
 
 .trial {
-    background-color: #6053c6;
-    border-radius: 5px;
+    background-color: #5348ac;
+    border-radius: 6px;
     text-align: center;
     font-size: medium;
-    padding: 10px;
-    color: white;
+    padding: 15px;
+    color: rgb(235, 229, 229);
+    font-family: Poppins-Light;
+    font-size: small;
+    box-shadow: 0px 7px rgba(79, 79, 79, 0.286);
+    margin-bottom: 20px;
+}
+
+.terms {
+    font-family: Poppins;
+    font-size: xx-small;
+    color: rgb(192, 192, 192);
+}
+
+.terms strong {
+    color: rgb(200, 131, 2);
+    cursor: pointer;
 }
