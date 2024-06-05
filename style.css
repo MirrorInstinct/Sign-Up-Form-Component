@@ -72,6 +72,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-weight: bold;
 }
 
 input[type=submit] {
@@ -108,4 +109,8 @@ input[type=submit] {
 .terms strong {
     color: rgb(200, 131, 2);
     cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    /*Having issues formatting the size and width correctly*/
 }
