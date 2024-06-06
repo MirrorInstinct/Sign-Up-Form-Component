@@ -19,7 +19,6 @@ body {
     background-repeat: no-repeat;
 }
 
-
 .container {
     display: flex;
     position: absolute;
@@ -91,7 +90,6 @@ input[type=submit] {
     background-color: #5348ac;
     border-radius: 6px;
     text-align: center;
-    font-size: medium;
     padding: 15px;
     color: rgb(235, 229, 229);
     font-family: Poppins-Light;
@@ -112,5 +110,52 @@ input[type=submit] {
 }
 
 @media only screen and (max-width: 600px) {
-    /*Having issues formatting the size and width correctly*/
+    body {
+        background-image: url("images/bg-intro-mobile.png");
+        background-color: #ff7978;
+        background-repeat: repeat; /*Needs work*/
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-width: 350px;
+    }
+    
+    .description {
+        color: white;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .description h1 {
+        font-size: 35px;
+    }
+
+    .description p {
+        font-family: Poppins;
+        font-size: medium;
+        margin-bottom: 30px;
+    }
+
+    .trial {
+        background-color: #5348ac;
+        border-radius: 6px;
+        text-align: center;
+        font-size: medium;
+        padding: 17px 60px;
+    }
+
+    .fields{
+        background-color: white;
+        border-radius: 10px;
+        text-align: center;
+        padding: 30px;
+        box-shadow: 0px 5px rgba(79, 79, 79, 0.286);
+    }
+    
+    input {
+        padding: 20px 20px;
+        margin: 10px 0;
+    }
 }
