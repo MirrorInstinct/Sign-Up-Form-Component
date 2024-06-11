@@ -26,11 +26,26 @@
     <div class="sign-up">
       <p class="trial"><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
       <div class="fields">
-        <input type="text" placeholder="First Name" required>
-        <input type="text" placeholder="Last Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="password" placeholder="Password" required>
-        <input type="submit" value="CLAIM YOUR FREE TRIAL">
+        <form name="myForm" onsubmit="return validateForm()">
+
+          <!-- 6/11/2024 -->
+          <!-- This basically works but just for the first name. Needs a lot of work. -->
+          <input type="text" name="fname" placeholder="First Name"><p id = "blank"></p>
+          <input type="text" name="lname" placeholder="Last Name"><p id = "blank"></p>
+          <input type="email" name="email" placeholder="Email Address"><p id = "blank"></p>
+          <input type="password" name="password" placeholder="Password"><p id = "blank"></p>
+          
+          <input type="submit" value="Submit">
+        </form>
+
+        <!-- Original code -->
+        <!-- <form>
+          <input type="text" name = "fname" placeholder="First Name" required><p id = "blank"></p>
+          <input type="text" placeholder="Last Name" required>
+          <input type="email" placeholder="Email Address" required>
+          <input type="password" placeholder="Password" required>
+          <input type="submit" value="CLAIM YOUR FREE TRIAL">
+        </form> -->
         <p class="terms">By clicking the button, you are agreeing to our <strong>Terms and Services</strong></p>
       </div>
     </div>
@@ -42,5 +57,21 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
+
+  <script>
+    // This works but like I wrote under forms section, needs a lot of work.
+
+    let fempty = document.getElementById("blank")
+        
+        function validateForm() {
+            const inputField = document.forms["myForm"]["fname"].value;
+            if (inputField === "") {
+              alert("Name must be filled out");
+              return false;
+            }
+            // Additional validation logic (if needed)
+            return true; // Allow form submission
+        }
+  </script>
 </body>
 </html>
