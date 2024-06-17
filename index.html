@@ -1,77 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="description">
-      <h1>Learn to code by watching others</h1>
-      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-        but understanding how developers think is invaluable.</p>
-    </div>
-  
-    <div class="sign-up">
-      <p class="trial"><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
-      <div class="fields">
-        <form name="myForm" onsubmit="return validateForm()">
+    <title>Frontend Mentor | Intro component with sign up form</title>
 
-          <!-- 6/11/2024 -->
-          <!-- This basically works but just for the first name. Needs a lot of work. -->
-          <input type="text" name="fname" placeholder="First Name"><p id = "blank"></p>
-          <input type="text" name="lname" placeholder="Last Name"><p id = "blank"></p>
-          <input type="email" name="email" placeholder="Email Address"><p id = "blank"></p>
-          <input type="password" name="password" placeholder="Password"><p id = "blank"></p>
-          
-          <input type="submit" value="Submit">
-        </form>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="description">
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
 
-        <!-- Original code -->
-        <!-- <form>
-          <input type="text" name = "fname" placeholder="First Name" required><p id = "blank"></p>
-          <input type="text" placeholder="Last Name" required>
-          <input type="email" placeholder="Email Address" required>
-          <input type="password" placeholder="Password" required>
-          <input type="submit" value="CLAIM YOUR FREE TRIAL">
-        </form> -->
-        <p class="terms">By clicking the button, you are agreeing to our <strong>Terms and Services</strong></p>
+      <div class="sign-up">
+        <p class="trial">
+          <strong>Try it free 7 days</strong> then $20/mo. thereafter
+        </p>
+        <div class="fields">
+          <form id="form" action="/" method="get">
+            <div>
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                placeholder="First Name"
+              />
+              <p id="blank"></p>
+              <p id="fwarn"></p>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="Last Name"
+              />
+              <p id="blank"></p>
+              <p id="lwarn"></p>
+            </div>
+            <div>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email Address"
+              />
+              <p id="blank"></p>
+              <p id="ewarn"></p>
+            </div>
+            <div>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+              />
+              <p id="blank"></p>
+              <p id="pwarn"></p>
+            </div>
+            <div>
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+
+          <p class="terms">
+            By clicking the button, you are agreeing to our
+            <strong>Terms and Services</strong>
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-  
-  <!-- <footer>
+
+    <!-- <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
 
-  <script>
-    // This works but like I wrote under forms section, needs a lot of work.
+    <script>
+      const form = document.getElementById("form");
+      const fname = document.getElementById("fname");
+      const lname = document.getElementById("lname");
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
 
-    let fempty = document.getElementById("blank")
-        
-        function validateForm() {
-            const inputField = document.forms["myForm"]["fname"].value;
-            if (inputField === "") {
-              alert("Name must be filled out");
-              return false;
-            }
-            // Additional validation logic (if needed)
-            return true; // Allow form submission
+      const fwarn = document.getElementById("fwarn");
+      const lwarn = document.getElementById("lwarn");
+      const ewarn = document.getElementById("ewarn");
+      const pwarn = document.getElementById("pwarn");
+
+      form.addEventListener("submit", (e) => {
+        if (fname.value === "" || fname.value == null) {
+          fwarn.innerHTML = "First name is required.";
+          fwarn.style.color = "red";
+          fname.style.border = "1px solid red";
+          e.preventDefault();
         }
-  </script>
-</body>
+        if (lname.value === "" || lname.value == null) {
+          lwarn.innerHTML = "Last name is required.";
+          lwarn.style.color = "red";
+          lname.style.border = "1px solid red";
+          e.preventDefault();
+        }
+        if (email.value === "" || email.value == null) {
+          ewarn.innerHTML = "Email is required.";
+          ewarn.style.color = "red";
+          email.style.border = "1px solid red";
+          email.placeholder = "email@example.com";
+          e.preventDefault();
+        }
+        if (password.value === "" || password.value == null) {
+          pwarn.innerHTML = "Password is required.";
+          pwarn.style.color = "red";
+          password.style.border = "1px solid red";
+          e.preventDefault();
+        }
+      });
+    </script>
+  </body>
 </html>

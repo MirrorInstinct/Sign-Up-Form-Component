@@ -1,161 +1,166 @@
 @font-face {
-    font-family: Poppins;
-    src: url(fonts/Poppins-Regular.ttf);
+  font-family: Poppins;
+  src: url(fonts/Poppins-Regular.ttf);
 }
 
 @font-face {
-    font-family: Poppins-Bold;
-    src: url(fonts/Poppins-Bold.ttf);
+  font-family: Poppins-Bold;
+  src: url(fonts/Poppins-Bold.ttf);
 }
 
 @font-face {
-    font-family: Poppins-Light;
-    src: url(fonts/Poppins-Light.ttf);
+  font-family: Poppins-Light;
+  src: url(fonts/Poppins-Light.ttf);
 }
 
 body {
-    background-image: url("images/bg-intro-desktop.png");
-    background-color: #ff7978;
-    background-repeat: no-repeat;
+  background-image: url("images/bg-intro-desktop.png");
+  background-color: #ff7978;
+  background-repeat: no-repeat;
 }
 
 .container {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 800px;
-    max-width: 900px; /*This the ideal width but it needs to be worked on*/
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 800px;
+  max-width: 900px; /*This the ideal width but it needs to be worked on*/
 }
 
 .description {
-    color: white;
-    float: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 50px;
+  color: white;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 50px;
 }
 
 .description h1 {
-    font-family: Poppins-Bold;
-    font-size: 40px;
-    line-height: 110%;
-    /*Need to space letters closer*/
+  font-family: Poppins-Bold;
+  font-size: 40px;
+  line-height: 110%;
+  /*Need to space letters closer*/
 }
 
 .description p {
-    font-family: Poppins;
-    font-size: small;
+  font-family: Poppins;
+  font-size: small;
 }
 
 .sign-up {
-    /* max-width: 500px;
+  /* max-width: 500px;
     min-width: 500px; */
 }
 
-.fields{
-    background-color: white;
-    border-radius: 10px;
-    text-align: center;
-    padding: 30px;
-    box-shadow: 0px 5px rgba(79, 79, 79, 0.286);
+#form p {
+  float: right;
+  font-size: small;
+  margin: 0 0 10px 0;
+}
+
+.fields {
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0px 5px rgba(79, 79, 79, 0.286);
 }
 
 input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-weight: bold;
+  padding: 20px 20px;
+  padding-right: 200px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-weight: bold;
 }
 
-input[type=submit] {
-    width: 100%;
-    background-color: #75bf78;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    box-shadow: 2px 2px #63a765;
-  }
+input[type="submit"] {
+  width: 100%;
+  background-color: #75bf78;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2px 2px #63a765;
+}
 
 .trial {
-    background-color: #5348ac;
-    border-radius: 6px;
-    text-align: center;
-    padding: 15px;
-    color: rgb(235, 229, 229);
-    font-family: Poppins-Light;
-    font-size: small;
-    box-shadow: 0px 7px rgba(79, 79, 79, 0.286);
-    margin-bottom: 20px;
+  background-color: #5348ac;
+  border-radius: 6px;
+  text-align: center;
+  padding: 15px;
+  color: rgb(235, 229, 229);
+  font-family: Poppins-Light;
+  font-size: small;
+  box-shadow: 0px 7px rgba(79, 79, 79, 0.286);
+  margin-bottom: 20px;
 }
 
 .terms {
-    font-family: Poppins;
-    font-size: xx-small;
-    color: rgb(192, 192, 192);
+  font-family: Poppins;
+  font-size: xx-small;
+  color: rgb(192, 192, 192);
 }
 
 .terms strong {
-    color: rgb(200, 131, 2);
-    cursor: pointer;
+  color: rgb(200, 131, 2);
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
-    body {
-        background-image: url("images/bg-intro-mobile.png");
-        background-color: #ff7978;
-        background-repeat: repeat; /*Needs work*/
-    }
+  body {
+    background-image: url("images/bg-intro-mobile.png");
+    background-color: #ff7978;
+    background-repeat: repeat; /*Needs work*/
+  }
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        min-width: 350px;
-    }
-    
-    .description {
-        color: white;
-        text-align: center;
-        padding: 5px;
-    }
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+  }
 
-    .description h1 {
-        font-size: 30px;
-    }
+  .description {
+    color: white;
+    text-align: center;
+    padding: 5px;
+  }
 
-    .description p {
-        font-family: Poppins;
-        font-size: 15px;
-        margin-bottom: 10px;
-    }
+  .description h1 {
+    font-size: 30px;
+  }
 
-    .trial {
-        background-color: #5348ac;
-        border-radius: 6px;
-        text-align: center;
-        font-size: medium;
-        padding: 15px 60px;
-    }
+  .description p {
+    font-family: Poppins;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
 
-    .fields{
-        background-color: white;
-        border-radius: 10px;
-        text-align: center;
-        padding: 20px 25px;
-        box-shadow: 0px 5px rgba(79, 79, 79, 0.286);
-    }
-    
-    input {
-        padding: 20px 20px;
-        margin: 5px 0;
-    }
+  .trial {
+    background-color: #5348ac;
+    border-radius: 6px;
+    text-align: center;
+    font-size: medium;
+    padding: 15px 60px;
+  }
+
+  .fields {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 25px;
+    box-shadow: 0px 5px rgba(79, 79, 79, 0.286);
+  }
+
+  input {
+    padding-right: 100px;
+  }
 }
