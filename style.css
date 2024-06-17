@@ -13,6 +13,11 @@
   src: url(fonts/Poppins-Light.ttf);
 }
 
+@font-face {
+  font-family: Poppins-MediumItalic;
+  src: url(fonts/Poppins-MediumItalic.ttf);
+}
+
 body {
   background-image: url("images/bg-intro-desktop.png");
   background-color: #ff7978;
@@ -50,15 +55,11 @@ body {
   font-size: small;
 }
 
-.sign-up {
-  /* max-width: 500px;
-    min-width: 500px; */
-}
-
 #form p {
   float: right;
-  font-size: small;
+  font-size: x-small;
   margin: 0 0 10px 0;
+  font-family: Poppins-MediumItalic;
 }
 
 .fields {
@@ -78,6 +79,9 @@ input {
   border-radius: 4px;
   box-sizing: border-box;
   font-weight: bold;
+  background-image: url("/images/icon-error.svg");
+  background: url("/images/icon-error.svg") no-repeat 95% 50% / 25px 25px;
+  background-image: none;
 }
 
 input[type="submit"] {
@@ -90,6 +94,7 @@ input[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 2px 2px #63a765;
+  background-image: none;
 }
 
 .trial {
