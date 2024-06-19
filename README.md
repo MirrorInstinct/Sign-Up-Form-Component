@@ -59,5 +59,5 @@ Now that I have a better understanding of how to overwrite text or display certa
 
 ## Author
 
-- Website - [Jarol](https://mirrorinstinct.github.io/Sign-Up-Form-Component/)
+- Website - [Sign-Up-Form_Component](https://mirrorinstinct.github.io/Sign-Up-Form-Component/)
 - Frontend Mentor - [@MirrorInstinct](https://www.frontendmentor.io/home)
