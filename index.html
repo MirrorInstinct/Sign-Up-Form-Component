@@ -42,6 +42,11 @@
         <div class="fields">
           <form id="form" action="/" method="get">
             <div>
+              <img
+                src="images/icon-error.svg"
+                class="error-icon"
+                id="fname-error"
+              />
               <input
                 type="text"
                 id="fname"
@@ -51,6 +56,11 @@
               <p id="fwarn"></p>
             </div>
             <div>
+              <img
+                src="images/icon-error.svg"
+                class="error-icon"
+                id="lname-error"
+              />
               <input
                 type="text"
                 id="lname"
@@ -60,6 +70,11 @@
               <p id="lwarn"></p>
             </div>
             <div>
+              <img
+                src="images/icon-error.svg"
+                class="error-icon"
+                id="email-error"
+              />
               <input
                 type="email"
                 id="email"
@@ -69,6 +84,11 @@
               <p id="ewarn"></p>
             </div>
             <div>
+              <img
+                src="images/icon-error.svg"
+                class="error-icon"
+                id="password-error"
+              />
               <input
                 type="password"
                 id="password"
@@ -90,12 +110,12 @@
       </div>
     </div>
 
-    <!-- <footer>
+    <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Jarol</a>
     </p>
-  </footer> -->
+  </footer>
 
     <script>
       const form = document.getElementById("form");
@@ -109,17 +129,24 @@
       const ewarn = document.getElementById("ewarn");
       const pwarn = document.getElementById("pwarn");
 
+      const ferror = document.getElementById("fname-error");
+      const lerror = document.getElementById("lname-error");
+      const eerror = document.getElementById("email-error");
+      const perror = document.getElementById("password-error");
+
       form.addEventListener("submit", (e) => {
         if (fname.value === "" || fname.value == null) {
           fwarn.innerHTML = "First name is required.";
           fwarn.style.color = "red";
           fname.style.border = "1px solid red";
+          ferror.style.visibility = "visible";
           e.preventDefault();
         }
         if (lname.value === "" || lname.value == null) {
           lwarn.innerHTML = "Last name is required.";
           lwarn.style.color = "red";
           lname.style.border = "1px solid red";
+          lerror.style.visibility = "visible";
           e.preventDefault();
         }
         if (email.value === "" || email.value == null) {
@@ -127,12 +154,14 @@
           ewarn.style.color = "red";
           email.style.border = "1px solid red";
           email.placeholder = "email@example.com";
+          eerror.style.visibility = "visible";
           e.preventDefault();
         }
         if (password.value === "" || password.value == null) {
           pwarn.innerHTML = "Password is required.";
           pwarn.style.color = "red";
           password.style.border = "1px solid red";
+          perror.style.visibility = "visible";
           e.preventDefault();
         }
       });

@@ -22,6 +22,8 @@ body {
   background-image: url("images/bg-intro-desktop.png");
   background-color: #ff7978;
   background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 100vh;
 }
 
 .container {
@@ -31,7 +33,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   min-width: 800px;
-  max-width: 900px; /*This the ideal width but it needs to be worked on*/
+  max-width: 900px;
 }
 
 .description {
@@ -47,7 +49,6 @@ body {
   font-family: Poppins-Bold;
   font-size: 40px;
   line-height: 110%;
-  /*Need to space letters closer*/
 }
 
 .description p {
@@ -79,9 +80,13 @@ input {
   border-radius: 4px;
   box-sizing: border-box;
   font-weight: bold;
-  background-image: url("/images/icon-error.svg");
-  background: url("/images/icon-error.svg") no-repeat 95% 50% / 25px 25px;
-  background-image: none;
+}
+
+.error-icon{
+  position: absolute;
+  right: 50px;
+  padding-top: 23px;
+  visibility: hidden;
 }
 
 input[type="submit"] {
@@ -120,11 +125,18 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+.attribution {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
 @media only screen and (max-width: 600px) {
   body {
     background-image: url("images/bg-intro-mobile.png");
     background-color: #ff7978;
-    background-repeat: repeat; /*Needs work*/
+    background-repeat: repeat;
   }
 
   .container {
